@@ -17,11 +17,8 @@ steps:
 - script: |
     echo $(gh.token)
 
-- script: $MySECRET
+- script: echo $MySECRET
   env:
     MySECRET: $(gh.token)
-      echo $(MySECRET)
-      echo "$MySECRET"
-      echo $MySECRET
 
   displayName: 'Run a multi-line script'
