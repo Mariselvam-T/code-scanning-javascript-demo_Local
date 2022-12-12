@@ -15,18 +15,12 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo $token
-    echo "$token"
-    echo "$gh.token"
-    echo $(token)
     echo $(gh.token)
-    echo $(gh_token)
 
 - script: |
     env:
-     GH_TOKEN: $(gh_token)
+     GH_TOKEN: $(gh.token)
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    echo "$GH_TOKEN"
     echo $(GH_TOKEN)
   displayName: 'Run a multi-line script'
