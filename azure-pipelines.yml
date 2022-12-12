@@ -16,8 +16,9 @@ steps:
 
 - script: |
     env:
-     GH_TOKEN: $(gh.token)
+     GH_TOKEN: $(gh_token)
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     echo "$GH_TOKEN"
+    echo $(GH_TOKEN)
   displayName: 'Run a multi-line script'
