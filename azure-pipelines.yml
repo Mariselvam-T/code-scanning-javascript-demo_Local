@@ -20,5 +20,7 @@ steps:
 - script: echo $MySECRET
   env:
     MySECRET: $(gh.token)
+  displayName: 'Set env. variable'
 
-  displayName: 'Run a multi-line script'
+- script: echo $MySECRET
+  displayName: 'Access env. variable'
