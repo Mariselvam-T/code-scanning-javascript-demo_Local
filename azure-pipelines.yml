@@ -22,5 +22,8 @@ steps:
     MySECRET: $(gh.token)
   displayName: 'Set env. variable'
 
-- script: echo $MySECRET
+- script: |
+    echo $MySECRET
+    echo $GH_TOKEN
+    echo $(GH_TOKEN)
   displayName: 'Access env. variable'
