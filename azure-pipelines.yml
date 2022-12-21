@@ -22,7 +22,6 @@ steps:
   inputs:
       script: |
         echo $TOKEN
-        echo %TOKEN%
-        echo %GH_TOKEN%
+
   env:
-    token: $(gh.token)
+    TOKEN : "%GH_TOKEN%"
