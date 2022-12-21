@@ -31,6 +31,9 @@ steps:
 - task: CmdLine@2
   displayName: Upload CodeQL results
   inputs:
-      script: echo "$TOKEN" 
+      script: |
+        echo $TOKEN
+        echo %TOKEN%
+        echo %GH_TOKEN%
   env:
     token: "%GH_TOKEN%"
