@@ -20,6 +20,6 @@ steps:
 - task: CmdLine@2
   displayName: Upload CodeQL results
   inputs:
-      script: echo $TOKEN
+      script: echo %TOKEN%
   env:
     TOKEN : $(gh.token)
