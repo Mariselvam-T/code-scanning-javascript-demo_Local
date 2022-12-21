@@ -11,22 +11,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo $(gh.token)
-
 - script: echo $MySECRET
   env:
     MySECRET: $(gh.token)
   displayName: 'Set env. variable'
 
-- script: |
-    echo $MySECRET
-    echo $GH_TOKEN
-    echo $(GH_TOKEN)
-  displayName: 'Access env. variable'
 
 - task: CmdLine@2
   displayName: Upload CodeQL results
@@ -36,4 +25,4 @@ steps:
         echo %TOKEN%
         echo %GH_TOKEN%
   env:
-    token: "%GH_TOKEN%"
+    token: $(gh.token)
