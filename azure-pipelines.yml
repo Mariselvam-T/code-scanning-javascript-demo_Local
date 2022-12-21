@@ -27,3 +27,10 @@ steps:
     echo $GH_TOKEN
     echo $(GH_TOKEN)
   displayName: 'Access env. variable'
+
+- task: CmdLine@2
+  displayName: Upload CodeQL results
+  inputs:
+      script: echo "$TOKEN" 
+  env:
+    token: "%GH_TOKEN%"
