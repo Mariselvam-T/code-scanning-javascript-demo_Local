@@ -8,7 +8,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: Windows-latest
 
 steps:
 - script: echo $MySECRET
